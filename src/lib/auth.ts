@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { nanoid } from "nanoid";
-import { NextAuthOptions } from "next-auth";
+import { NextAuthOptions, getServerSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
@@ -66,3 +66,6 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
+
+//this will make it global
+export const getAuthSession = () => getServerSession(authOptions)
