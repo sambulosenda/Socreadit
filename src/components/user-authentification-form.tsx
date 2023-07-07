@@ -7,7 +7,6 @@ import * as React from "react";
 import { FC } from "react";
 import { Icons } from "./icons";
 import { useToast } from "@/hooks/use-toast";
-import { error } from "console";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
